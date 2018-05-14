@@ -1,0 +1,293 @@
+.ucd-tree-indent {
+  width: 32px;
+  height: 32px;
+  display: block;
+  float: left;
+  background: transparent url(../images/manager/icons.png) 0 -192px no-repeat;
+}
+
+.ucd-tree-indent-vertical {
+  background-position: 0 -96px;
+}
+
+.ucd-tree-indent-last {
+  background-position: 0 -32px;
+}
+
+.ucd-tree-last> .ucd-tree-header> .ucd-tree-indent-last {
+  background-position: 0 -64px;
+}
+
+.ucd-tree-header:before {
+  display: table;
+  content: "";
+}
+
+.ucd-tree-header:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ucd-tree-header> a {
+  padding-left: 0;
+  line-height: 32px;
+  float: left;
+  width: auto;
+}
+
+.ucd-tree-content {
+  margin-left: 0;
+}
+
+.ucd-tree-node {
+  margin-left: 0;
+}
+
+.ucd-tree-header {
+  padding: 0;
+}
+
+.ucd-tree-content .ucd-tree-content .ucd-tree-header> a {
+  color: #25354F;
+  padding: 0 5px 0 5px;
+  width: 53%;
+  margin-top: 7px;
+  border-radius: 30px;
+  line-height: 22px;
+}
+
+.ucd-tree-content .ucd-tree-content .ucd-tree-header> a.selected {
+  display: inline-block;
+  margin-top: 7px;
+  color: #fff;
+  border-radius: 30px;
+  padding: 0 5px 0 5px;
+  line-height: 22px;
+  width: 53%;
+  background: 100% center #4ba5fa no-repeat;
+  position: relative;
+}
+
+.ucd-tree-header> a {
+  line-height: 32px;
+  padding-left: 0;
+}
+
+.ucd-tree>.ucd-tree-content>li>.ucd-tree-header> a {
+  color: #25354F;
+  background: #4ba5fa;
+  line-height: 22px;
+  height: 22px;
+  padding: 0 8px;
+  width: 80px;
+  margin-top: 6px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.ucd-tree-header> a:hover {
+  /*text-decoration: underline;*/
+}
+
+.ucd-tree-header:hover {
+  background: none;
+}
+
+.ucd-tree-header> .ucd-icon-folder {
+  position: relative;
+  float: left;
+  width: 32px;
+  height: 32px;
+  left: 0;
+  top: 0;
+  background-image: url(../images/manager/lineIcons.png);
+  /*  background-position: -64px -128px;
+*/
+  background-position: -25px -266px;
+}
+
+.ucd-tree-content {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.ucd-tree-node {
+  margin-left: 0;
+}
+
+.ucd-tree-node.ucd-tree-last> .ucd-tree-header> .ucd-icon-folder {
+  background-position: -64px -128px;
+}
+
+.ucd-tree-node.ucd-tree-last.open> .ucd-tree-header> .ucd-icon-folder {
+  background-position: -32px 0;
+}
+
+
+/*.ucd-tree-node.ucd-tree-first > .ucd-tree-header > .ucd-icon-folder {
+  background-position: -64px -128px;
+}*/
+
+.ucd-tree-node.ucd-tree-first> .ucd-tree-header> .ucd-icon-folder {
+  background-position: -25px -266px;
+}
+
+
+/*.ucd-tree-node.ucd-tree-first.open > .ucd-tree-header > .ucd-icon-folder {
+  background-position: -32px 0;
+}*/
+
+.ucd-tree-node.ucd-tree-first.open> .ucd-tree-header> .ucd-icon-folder {
+  background-position: -27px -166px;
+}
+
+
+/*.ucd-tree-node.open > .ucd-tree-header > .ucd-icon-folder {
+  background-position: -32px 0;
+}*/
+
+.ucd-tree-node.open> .ucd-tree-header> .ucd-icon-folder {
+  background-position: -27px -166px;
+}
+
+.ucd-tree-node.selected> .ucd-tree-header {
+  background: none;
+}
+
+.ucd-tree-node.selected> .ucd-tree-header:hover {
+  background: none;
+}
+
+.ucd-tree-node.selected> .ucd-tree-header> a {
+  display: inline-block;
+  margin-top: 7px;
+  /*color: #fff;*/
+  border-radius: 30px;
+  padding: 0 5px 0 5px;
+  line-height: 22px;
+  width: 53%;
+  background: 100% center #e7ebf2 no-repeat;
+  position: relative;
+}
+
+.ucd-tree-node.selected> .ucd-tree-header> a> .add {
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+  position: absolute;
+  float: right;
+  right: 42px;
+  margin-top: 3px;
+  cursor: pointer;
+  background: url(../images/manager/icon_depet.png) no-repeat 1px 0px;
+}
+
+.ucd-tree-node.selected> .ucd-tree-header> a> .delete {
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+  position: absolute;
+  float: right;
+  right: 5px;
+  margin-top: 3px;
+  cursor: pointer;
+  background: url(../images/manager/icon_depet.png) no-repeat 1px -32px;
+}
+
+.ucd-tree-node.selected> .ucd-tree-header> a> .update {
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+  position: absolute;
+  float: right;
+  right: 24px;
+  margin-top: 3px;
+  /* border-radius: 25px; */
+  cursor: pointer;
+  background: url(../images/manager/icon_depet.png) no-repeat 1px -16px;
+}
+
+.ucd-tree-leaf {
+  margin-left: 0;
+}
+
+.ucd-tree-leaf.ucd-tree-first> .ucd-tree-header> .ucd-icon-folder {
+  background-position: 0 -32px;
+}
+
+.ucd-tree-leaf.ucd-tree-first.ucd-tree-last> .ucd-tree-header> .ucd-icon-folder {
+  background-position: 0 -64px;
+}
+
+.ucd-tree-leaf> .ucd-tree-header> .ucd-icon-folder {
+  background-position: 0 -32px;
+}
+
+.ucd-tree-leaf.ucd-tree-last> .ucd-tree-header> .ucd-icon-folder {
+  background-position: 0 -64px;
+}
+
+.ucd-tree> .ucd-tree-content {
+  background: none;
+  padding-left: 0;
+}
+
+
+/*.ucd-tree > .ucd-tree-content > .ucd-tree-first > .ucd-tree-header > .ucd-icon-folder {
+  background-position: -64px -224px;
+}*/
+
+.ucd-tree> .ucd-tree-content> .ucd-tree-first> .ucd-tree-header> .ucd-icon-folder {
+  background-position: 9px 8px;
+  background: url(../images/manager/icon_open&close.png) no-repeat 7px -21px;
+}
+
+
+/*.ucd-tree > .ucd-tree-content > .ucd-tree-first.open > .ucd-tree-header > .ucd-icon-folder {
+  background-position: -32px -96px;
+}*/
+
+.ucd-tree> .ucd-tree-content> .ucd-tree-first.open> .ucd-tree-header> .ucd-icon-folder {
+  background-position: 6px 4px;
+}
+
+.ucd-tree-last> .ucd-tree-content {
+  background: none;
+}
+
+
+/*.ucd-tree-first.ucd-tree-last > .ucd-tree-header > .ucd-icon-folder {
+  background-position: -64px -128px;
+}*/
+
+.ucd-tree-first.ucd-tree-last> .ucd-tree-header> .ucd-icon-folder {
+  background-position: -25px -266px;
+}
+
+
+/*.ucd-tree-first.ucd-tree-last.open > .ucd-tree-header > .ucd-icon-folder {
+  background-position: -32px 0;
+}*/
+
+.ucd-tree-first.ucd-tree-last.open> .ucd-tree-header> .ucd-icon-folder {
+  background-position: -27px -166px;
+}
+
+@media screen and (min-width:1366px) and (max-width:1679px) {
+  /*.user-top .search{
+    margin-top: 12px;
+}*/
+  .ucd-tree-node.selected> .ucd-tree-header> a {
+    width: 68% !important;
+  }
+  .ucd-tree-content .ucd-tree-content .ucd-tree-header> a {
+    width: 58% !important;
+  }
+  .ucd-tree-content .ucd-tree-content .ucd-tree-header> a.selected {
+    width: 58% !important;
+  }
+  .ucd-tree-indent {
+    width: 20px !important;
+  }
+}

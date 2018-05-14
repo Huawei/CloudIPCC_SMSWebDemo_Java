@@ -1,0 +1,264 @@
+@charset "utf-8";
+.header{
+	line-height: 34px;
+    height: 34px;
+    padding: 0 16px;
+    background: #f7f7f7;
+}
+.header > a{
+	cursor: pointer;
+    color: #6093ce;
+}
+.main-content{
+	position: absolute;
+	top: 34px;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+}
+.main-content-left{
+	padding: 20px;
+	transition: all .2s ease;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.main-content-left.move {
+    width: 70%;
+    max-width: calc(100% - 430px);
+}
+.main-content-right {
+	display: none;
+    position: absolute;
+    width: 30%;
+    right: -30%;
+    top: 0;
+    transition: all .2s ease;
+    border-left: 1px dashed #DFDFDF;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.main-content-right.move {
+	display: block;
+    right: 0;
+    min-width: 430px;
+}
+.return-icon{
+	position: absolute;
+    background: url(../images/moveBack.png) no-repeat;
+    height: 30px;
+    width: 30px;
+    right: 20px;
+    top: 16px;
+    cursor: pointer;
+}
+.copy-right{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e3e4e9;
+    height: 30px;
+    line-height: 30px;
+    color: #7b838c;
+    text-align: center;
+}
+.search-button{
+	float: right;
+	margin-left: 20px;
+}
+.date-box{
+	float: right;
+    margin-right: 20px;
+    margin-top: 4px;
+}
+.time-start, .time-end {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 150px;
+}
+.time-connect {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    text-align: center;
+}
+.time-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background: url(../images/date/dateIcon_blue.png) center no-repeat;
+}
+
+.panel-table{
+	width: 100%;
+	margin-top: 30px;
+}
+.panel-table .table-checkbox{
+	width: 20px;
+}
+.panel-table tr{
+	height: 50px;
+	border-bottom: 1px solid #ddd;
+}
+.panel-table tr:nth-child(odd){
+	background: #f9f9f9;
+}
+.panel-table tr:first-child{
+	height: 40px;
+	border-top: 1px solid #ddd;
+}
+.panel-table th{
+	text-align: left;
+}
+.panel-table th:first-child,.panel-table td:first-child{
+	padding-left: 20px;
+}
+.panel-table td.read{
+	color: #08b100;
+	font-weight: bold;
+}
+.panel-table td.unread{
+	color: #ff564a;
+	font-weight: bold;
+}
+
+.no-results{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.panel-list{
+	margin-top: 30px;
+}
+.panel-list > li + li{
+	margin-top: 10px;
+}
+.sub-list-name{
+	float: left;
+	width: 135px;
+	padding-left: 10px;
+	line-height: 26px;
+	position: relative;
+	box-sizing: border-box;
+}
+.sub-list-name.must-start::before{
+	content: "*";
+	position: absolute;
+	top: 3px;
+	left: -8px;
+	color: #E50017;
+}
+.sub-list-content{
+	margin-left: 145px;
+	min-width: 200px;
+    width: calc(100% - 180px);
+	min-height: 26px;
+	position: relative;
+}
+.pack-textarea{
+	width: 100%;
+	height: 100px;
+	resize: none;
+	border: 1px solid #c6c6c6;
+	border-radius: 5px;
+}
+.pack-textarea:focus{
+	border-color:#4ba5fa;
+}
+
+.no-or-yes{
+	display: none;
+}
+.checked + .no-or-yes{
+	display: block;
+	margin-top: 10px;
+}
+.right-button-box{
+	text-align: center;
+	margin-top: 30px;
+}
+.hide{
+	display: none;
+}
+/*view视图下右边栏*/
+/*.view .right-button-box .forward-button{
+	display: inline-block;
+}
+.view .right-button-box .send-button{
+	display: none;
+}
+.view .pack-input,.view .ec-droplist .ec-droplist-select{
+	border: none;
+    pointer-events: none;
+    color: #000;
+    padding-left: 0;
+}
+.view .search-icon{
+	display: none;
+}
+.view .ec-droplist .ec-droplist-select:after{
+	display: none;
+}*/
+.view-outbox{
+	display: none;
+}
+.view .view-outbox{
+	display: block;
+}
+.view .edit-outbox{
+	display: none;
+}
+
+
+.view-content{
+	margin-bottom: 20px;
+}
+
+
+#send-to-dept .line-tree {
+    height: 350px;
+    margin: 30px 20px;
+    overflow-y: auto;
+}
+#send-to-account .btn-box {
+    text-align: center;
+}
+#send-to-account .ec-checkbox {
+    margin-left: 10px;
+}
+#send-to-account .btn-box {
+    margin-top: 10px;
+}
+
+
+.main-content-right textarea.pack-input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    padding-left: 5px;
+    -webkit-transition: border .3s ease;
+    -moz-transition: border .3s ease;
+    transition: border .3s ease;
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    vertical-align: top;
+    padding-top: 8px;
+    resize: none;
+}
+.main-content-right .search-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 9px;
+    width: 15px;
+    height: 16px;
+    background: url(../images/search-log.png) no-repeat;
+}

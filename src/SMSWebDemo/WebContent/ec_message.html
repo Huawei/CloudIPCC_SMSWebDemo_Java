@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SMS</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/demo.css"/>
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/ec_message.css" />
+	<script src="./js/jquery-1.6.2.min.js"></script>
+	<script src="./js/ec_message.js"></script>
+ 	<script src="./js/json.js"></script>
+</head>
+
+<body>
+	<div class="header" > 
+		<div>
+		<span>Phone Number：</span>
+		<input id="userLogin_userName" class="pack-input-150"/>
+		<input value="Login" type="button" onclick="userLogin_doLogin();"/>
+		<input value="Logout" type="button" onclick="userLogin_doLogout();"/>
+		</div>
+	</div>
+	<div class="main-content message-page">
+		<div class="main-content-left move">
+			<ul class="view-nav mt30">
+				<li class="active">Message</li>
+			</ul>
+			<div class="view-content">
+				<div class="outbox-content">
+					<table id="tablebody" class="panel-table">						
+						<tr>
+							<th>receiver</th>
+							<th>sender</th>
+							<th>message</th>	
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- Send-->
+		<div class="main-content-right move">
+			<div class="return-icon"></div>
+			<h3>Test Send Message</h3>
+			<div class="edit-outbox">
+				<ul class="panel-list">
+					<li>
+						<div class="sub-list-name star-sign">Receiver：</div>
+						<div class="sub-list-content">
+							<textarea id="receive_sms"  class="pack-input"></textarea>
+						</div>
+					</li>
+					<li>
+						<div class="sub-list-name star-sign">Content:</div>
+						<div class="sub-list-content">
+							<textarea id="send_message" class="pack-input"></textarea>
+						</div>
+					</li>
+
+				</ul>
+				<div class="right-button-box">
+					<button id="message_sendBtn" class="u-btn send-button" onclick="createMessage()">Send</button>
+				</div>
+			</div>
+
+			<div class="view-outbox">
+				<ul class="panel-list">
+					<li>
+						<div class="sub-list-name">ApplicationID:</div>
+						<div id="applicationID" class="sub-list-content"></div>
+					</li>
+					<li>
+						<div class="sub-list-name">DestinationAddresses:</div>
+						<div id="destinationAddresses" class="sub-list-content"></div>
+					</li>
+					<li>
+						<div class="sub-list-name">ExtendCode:</div>
+						<div id="extendCode" class="sub-list-content"></div>
+					</li>
+					<li>
+						<div class="sub-list-name">Message:</div>
+						<div id="message" class="sub-list-content"></div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

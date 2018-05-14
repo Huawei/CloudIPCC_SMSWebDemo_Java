@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WeChatAdapter" version="2.5">
+	<display-name>SMS</display-name>
+
+	<welcome-file-list>
+		<welcome-file>ec_message.html</welcome-file>
+	</welcome-file-list>
+	
+		<!-- *******************Resteasy Config Section 新增REST接口配置信息 开始**********************-->
+	<context-param>
+		<param-name>resteasy.resources</param-name>
+		<param-value>
+        com.huawei.smsadapter.rest.SendSMSRest
+        </param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>resteasy.servlet.mapping.prefix</param-name>
+		<param-value>/resource/</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>resteasy.logger.type</param-name>
+		<param-value>SLF4J</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>Resteasy</servlet-name>
+		<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Resteasy</servlet-name>
+		<url-pattern>/resource/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- *******************Resteasy Config Section 新增REST接口配置信息 结束**********************-->
+</web-app>
